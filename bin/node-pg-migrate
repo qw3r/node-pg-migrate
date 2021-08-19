@@ -323,10 +323,10 @@ function readJson(json) {
               port: json.port || 5432,
               ssl: json.ssl,
             }
-    }
-  } else {
-    DB_CONNECTION = typeof DB_CONNECTION !== 'undefined' ? DB_CONNECTION : json
+    } 
   }
+  
+  DB_CONNECTION = typeof DB_CONNECTION !== 'undefined' ? DB_CONNECTION : json
 }
 
 // Load config (and suppress the no-config-warning)
